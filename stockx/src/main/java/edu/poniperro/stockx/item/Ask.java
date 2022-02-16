@@ -18,4 +18,10 @@ public class Ask implements Offer{
     public int value() {
         return this.ask;
     }
+
+    @Override
+    public String toString() {
+        return "\t\t" + size() + "\t" + Integer.toString(value()) + "\n";
+    
+    }
 }

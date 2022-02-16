@@ -18,4 +18,10 @@ public class Sale implements Offer{
     public int value() {
         return this.price;
     }
+
+    @Override
+    public String toString() {
+        return "\t\t" + size() + "\t" + Integer.toString(value()) + "\n";
+    
+    }
 }
