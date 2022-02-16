@@ -17,6 +17,7 @@ public class Sneaker implements Item{
         this.name = name;
     }
 
+    @Override
     public String toString() {
         StringBuilder output = new StringBuilder();
         output.append("Style: ").append(this.style).append("\n");
@@ -31,9 +32,6 @@ public class Sneaker implements Item{
         return this.offers;
     }
 
-    int offersSize() {
-        return offers().size();
-    }
 
     @Override
     public void add(Offer offer) {
