@@ -12,7 +12,7 @@ import edu.poniperro.stockx.item.Sneaker;
 public class SalesTest {
     
     @Test
-    public void checkCriteriaAskListSize() {
+    public void checkCriteriaSalesListSize() {
 
         Sneaker sneaker = new Sneaker("555088-105", "Jordan 1 Retro High Dark Mocha");
 
