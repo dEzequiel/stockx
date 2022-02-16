@@ -12,4 +12,6 @@ public class SneakerTest {
         String expected = "Style: 555088-105" +"\n"+ "Name: Jordan 1 Retro High Dark Mocha";
         assertEquals(expected, sneaker.toString());
     }
+
+
 }
