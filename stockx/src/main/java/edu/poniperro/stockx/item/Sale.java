@@ -1,12 +1,12 @@
 package edu.poniperro.stockx.item;
 
-public class Bid implements Offer{
+public class Sale implements Offer{
     private String size;
-    private Integer bid;
+    private Integer price;
 
-    public Bid(String size, int bid) {
+    public Sale(String size, int price) {
         this.size = size;
-        this.bid = bid;
+        this.price = price;
     }
 
     @Override
@@ -16,6 +16,6 @@ public class Bid implements Offer{
 
     @Override
     public int value() {
-        return this.bid;
+        return this.price;
     }
 }
