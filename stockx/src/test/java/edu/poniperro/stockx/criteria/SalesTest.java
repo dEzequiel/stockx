@@ -2,10 +2,13 @@ package edu.poniperro.stockx.criteria;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.Test;
 
 import edu.poniperro.stockx.item.Ask;
 import edu.poniperro.stockx.item.Bid;
+import edu.poniperro.stockx.item.Offer;
 import edu.poniperro.stockx.item.Sale;
 import edu.poniperro.stockx.item.Sneaker;
 
@@ -40,5 +43,24 @@ public class SalesTest {
 
         assertEquals(5, sales.checkCriteria(sneaker).size());        
     }
+
+    @Test
+    public void getLastSale() {
+        Sneaker sneaker = new Sneaker("555088-105", "Jordan 1 Retro High Dark Mocha");
+
+        Sale sale = new Sale("6", 356);
+        sneaker.add(sale);
+        sneaker.add(new Sale("9.5", 352));
+        sneaker.add(new Sale("9.5", 404));
+        sneaker.add(new Sale("13", 360));
+        sneaker.add(new Sale("13", 372));
+
+        Criteria sales = new LastSale();
+        List<Offer> lastSale = sales.checkCriteria(sneaker);
+
+        sneaker.setSale(lastSale.get(0).value());
+
+        assertEquals(372, sneaker.getSale());
+    }   
 }
 
