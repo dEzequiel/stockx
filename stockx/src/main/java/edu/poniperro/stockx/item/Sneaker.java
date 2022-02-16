@@ -38,5 +38,10 @@ public class Sneaker implements Item{
         offers().add(offer);
     }
 
+    @Override
+    public void setBid(int bid) {
+        this.bid = bid;
+    }
+
 
 }
