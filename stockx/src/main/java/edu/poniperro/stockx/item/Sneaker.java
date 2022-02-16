@@ -3,7 +3,7 @@ package edu.poniperro.stockx.item;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sneaker {
+public class Sneaker implements Item{
     
     private String style;
     private final String name;
@@ -25,5 +25,19 @@ public class Sneaker {
         return output.toString();
 
     }
+    
+    List<Offer> offers() {
+        return this.offers;
+    }
+
+    int offersSize() {
+        return offers().size();
+    }
+
+    @Override
+    public void add(Offer offer) {
+        offers().add(offer);
+    }
+
 
 }
