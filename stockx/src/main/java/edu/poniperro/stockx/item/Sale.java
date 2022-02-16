@@ -16,7 +16,7 @@ public class Sale implements Offer{
 
     @Override
     public int value() {
-        return this.price;
+        return this.price.intValue();
     }
 
     @Override
