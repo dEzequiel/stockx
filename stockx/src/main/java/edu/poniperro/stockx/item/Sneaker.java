@@ -43,5 +43,9 @@ public class Sneaker implements Item{
         this.bid = bid;
     }
 
+    @Override
+    public int getBid() {
+        return this.bid;
+    }
 
 }
