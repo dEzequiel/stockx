@@ -48,4 +48,13 @@ public class Sneaker implements Item{
         return this.bid;
     }
 
+    @Override
+    public void setAsk(int ask) {
+        this.ask = ask;
+    }
+
+    @Override void getAsk() {
+        return this.ask
+    }
+
 }
