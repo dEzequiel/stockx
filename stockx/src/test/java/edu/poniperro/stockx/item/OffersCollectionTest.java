@@ -16,7 +16,7 @@ public class OffersCollectionTest {
         sneaker.add(bid);
         sneaker.add(ask);
         sneaker.add(sale);
-        assertEquals(3, sneaker.offersSize());
+        assertEquals(3, sneaker.offers().size());
     }
     
 }
