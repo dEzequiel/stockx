@@ -28,7 +28,8 @@ public class MaxBidTest {
         List<Offer> maximum = maxBid.checkCriteria(sneaker);
 
         sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
-        assertEquals(bid2, maximum.get(0));
+        
+        assertEquals(sneaker.getBid(), maximum.get(0).value());
         assertEquals(1, maximum.size());
         
     }
