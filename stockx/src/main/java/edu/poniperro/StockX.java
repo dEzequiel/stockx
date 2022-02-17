@@ -1,8 +1,19 @@
 package edu.poniperro;
 
+import java.util.List;
+
+import edu.poniperro.stockx.criteria.Asks;
+import edu.poniperro.stockx.criteria.Bids;
+import edu.poniperro.stockx.criteria.Criteria;
+import edu.poniperro.stockx.criteria.LastSale;
+import edu.poniperro.stockx.criteria.MaxBid;
+import edu.poniperro.stockx.criteria.MinAsk;
+import edu.poniperro.stockx.criteria.Sales;
 import edu.poniperro.stockx.item.Ask;
 import edu.poniperro.stockx.item.Bid;
 import edu.poniperro.stockx.item.Item;
+import edu.poniperro.stockx.item.Offer;
+import edu.poniperro.stockx.item.Sale;
 import edu.poniperro.stockx.item.Sneaker;
 
 /**
@@ -75,9 +86,9 @@ public class StockX {
 //          * offers de la zapatilla. 
 //          */
 
-//         Criteria bids = new Bids();
-//         System.out.println("\n\t\t All BIDS");
-//         bids.checkCriteria(sneaker).forEach(System.out::print);
+        Criteria bids = new Bids();
+        System.out.println("\n\t\t All BIDS");
+        bids.checkCriteria(sneaker).forEach(System.out::print);
 
 //         /**
 //          * Crea el filtro "Asks" que filtra
@@ -85,9 +96,9 @@ public class StockX {
 //          * offers de la zapatilla. 
 //          */
 
-//         Criteria asks = new Asks();
-//         System.out.println("\n\t\t All ASKS");
-//         asks.checkCriteria(sneaker).forEach(System.out::print);
+        Criteria asks = new Asks();
+        System.out.println("\n\t\t All ASKS");
+        asks.checkCriteria(sneaker).forEach(System.out::print);
 
 //         /**
 //          * Muestra la bid maxima
@@ -102,10 +113,10 @@ public class StockX {
 //          * propiedad bid de sneaker.
 //          */
 
-//         Criteria maxBid = new MaxBid();
-//         List<Offer> maximum = maxBid.checkCriteria(sneaker);
-//         sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
-//         System.out.println(Stockx.draw(sneaker));
+        Criteria maxBid = new MaxBid();
+        List<Offer> maximum = maxBid.checkCriteria(sneaker);
+        sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
+        // System.out.println(StockxX.draw(sneaker));
 
 //         /**
 //          * Muestra la ask minima
@@ -120,10 +131,10 @@ public class StockX {
 //          * ask de sneaker.
 //          */
 
-//         Criteria minAsk = new MinAsk();
-//         List<Offer> minimum = minAsk.checkCriteria(sneaker);
-//         sneaker.setAsk(minimum.isEmpty()? 0 : minimum.get(0).value());
-//         System.out.println(Stockx.draw(sneaker));
+        Criteria minAsk = new MinAsk();
+        List<Offer> minimum = minAsk.checkCriteria(sneaker);
+        sneaker.setAsk(minimum.isEmpty()? 0 : minimum.get(0).value());
+        // System.out.println(Stockx.draw(sneaker));
 
 //         /**
 //          * Añade ventas (sales) de 
@@ -133,12 +144,12 @@ public class StockX {
 //          * a mas reciente.
 //          */
 
-//         Sale sale = new Sale("6", 356);
-//         sneaker.add(sale);
-//         sneaker.add(new Sale("9.5", 352));
-//         sneaker.add(new Sale("9.5", 404));
-//         sneaker.add(new Sale("13", 360));
-//         sneaker.add(new Sale("13", 372));
+        Sale sale = new Sale("6", 356);
+        sneaker.add(sale);
+        sneaker.add(new Sale("9.5", 352));
+        sneaker.add(new Sale("9.5", 404));
+        sneaker.add(new Sale("13", 360));
+        sneaker.add(new Sale("13", 372));
 
 //         /**
 //          * Crear el filtro "Sales" que filtra
@@ -146,9 +157,9 @@ public class StockX {
 //          * offers de la zapatilla.
 //          */
 
-//         Criteria sales = new Sales();
-//         System.out.println("\n\t\t All SALES");
-//         sales.checkCriteria(sneaker).forEach(System.out::print);
+        Criteria sales = new Sales();
+        System.out.println("\n\t\t All SALES");
+        sales.checkCriteria(sneaker).forEach(System.out::print);
         
 //         /**
 //          * Crea un filtro que devuelva
@@ -157,11 +168,12 @@ public class StockX {
 //          * en sneaker).
 //          */
         
-//         Criteria lastSale = new LastSale();
+        Criteria lastSale = new LastSale();
         
-//         List<Offer> actualSale = lastSale.checkCriteria(sneaker);
-//         sneaker.setSale(actualSale.isEmpty()? 0 : actualSale.get(0).value());
-//         System.out.println(Stockx.draw(sneaker));
+        List<Offer> actualSale = lastSale.checkCriteria(sneaker);
+        sneaker.setSale(actualSale.isEmpty()? 0 : actualSale.get(0).value());
+        System.out.println(sneaker);
+        // System.out.println(Stockx.draw(sneaker));
 
 //         /**
 //          * Mostrar info de la zapatilla 
@@ -252,5 +264,6 @@ public class StockX {
         
 //         "\t" + sneaker.toString() + "\n" +
 //         "\t\tlast sale: " + sneaker.getSale();
- }
+//  }
+}
 }
