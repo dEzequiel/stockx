@@ -24,4 +24,9 @@ public class Sale implements Offer{
         return "\t\t" + size() + "\t" + Integer.toString(value()) + "\n";
     
     }
+
+    @Override
+    public int compareTo(Offer offer) {
+        return this.price.compareTo(value());
+    }
 }
