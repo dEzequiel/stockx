@@ -3,12 +3,12 @@ package edu.poniperro.stockx.item;
 import java.util.List;
 
 public interface Item {
-    // int getBid();
-    // int getAsk();
-    // int getSale();
+    int getBid();
+    int getAsk();
+    int getSale();
     void add(Offer offer);
     List<Offer> offers();
-    // void setBid(int bid);
-    // void setAsk(int ask);
-    // void setSale(int sale);
+    void setBid(int bid);
+    void setAsk(int ask);
+    void setSale(int sale);
 }
