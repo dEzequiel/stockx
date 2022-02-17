@@ -1,6 +1,7 @@
 package edu.poniperro.stockx.criteria;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
@@ -61,6 +62,16 @@ public class SalesTest {
         sneaker.setSale(lastSale.get(0).value());
 
         assertEquals(372, sneaker.getSale());
-    }   
+    } 
+    
+    @Test
+    public void getEmptyList() {
+        Sneaker sneaker = new Sneaker("555088-105", "Jordan 1 Retro High Dark Mocha");
+        Criteria sales = new LastSale();
+        List<Offer> lastSale = sales.checkCriteria(sneaker);
+
+        assertTrue(lastSale.isEmpty());
+
+    }
 }
 
