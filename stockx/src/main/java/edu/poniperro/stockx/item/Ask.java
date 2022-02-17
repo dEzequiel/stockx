@@ -21,7 +21,7 @@ public class Ask implements Offer{
 
     @Override
     public int compareTo(Offer offer) {
-        return this.ask.compareTo(value());
+        return this.ask.compareTo(offer.value());
     }
 
     @Override
