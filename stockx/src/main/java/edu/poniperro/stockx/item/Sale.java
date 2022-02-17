@@ -27,6 +27,6 @@ public class Sale implements Offer{
 
     @Override
     public int compareTo(Offer offer) {
-        return this.price.compareTo(value());
+        return this.price.compareTo(offer.value());
     }
 }
