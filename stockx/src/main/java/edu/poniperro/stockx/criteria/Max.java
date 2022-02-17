@@ -19,7 +19,7 @@ public class Max implements Criteria{
     @Override
     public List<Offer> checkCriteria(Item item) {
 
-        Criteria andCriteria = new AndCriteria(criteria, otherCriteria);
+        Criteria andCriteria = new AndCriteria(this.criteria, this.otherCriteria);
         Optional<Offer> offer = andCriteria.checkCriteria(item)
                 .stream()
                 .max(Offer::compareTo);

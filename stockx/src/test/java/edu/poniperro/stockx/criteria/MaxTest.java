@@ -4,15 +4,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-import java.util.List;
-import java.util.Optional;
 
 import org.junit.Test;
 
 import edu.poniperro.stockx.item.Bid;
 import edu.poniperro.stockx.item.Item;
 import edu.poniperro.stockx.item.Sneaker;
-import edu.poniperro.stockx.criteria.Max;
 
 
 public class MaxTest {
