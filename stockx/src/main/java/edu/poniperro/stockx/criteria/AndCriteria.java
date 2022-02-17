@@ -22,12 +22,10 @@ public class AndCriteria implements Criteria{
     @Override
     public List<Offer> checkCriteria(Item item) {
 
-        //concatenate streams. checkCriteria returns a list, get the stream of that list with .stream() and concatenate them
-        List<Offer> filterList = Stream.concat(this.criteria.checkCriteria(item).stream(),
-                                                this.otheCriteria.checkCriteria(item).stream())
-                                                                                                .collect(Collectors.toList());
-        return filterList;
+        List<Offer> criteriaList = this.criteria.checkCriteria(item);
+        List<Offer> otherCriteriaList = this.otheCriteria.checkCriteria(item);
         
+        return criteriaList.stream().filter(otherCriteriaList::contains).collect(Collectors.toList());
         
     }
 }
