@@ -20,12 +20,11 @@ public class Max implements Criteria{
     public List<Offer> checkCriteria(Item item) {
 
         Criteria andCriteria = new AndCriteria(criteria, otherCriteria);
+        Optional<Offer> offer = andCriteria.checkCriteria(item)
+                .stream()
+                .max(Offer::compareTo);
 
-        Optional<Offer> max = andCriteria.checkCriteria(item)
-                                                            .stream()
-                                                            .max(Offer::compareTo);
-        
-        return max.isPresent()? List.of(max.get()) : List.of();
+        return offer.isPresent()? List.of(offer.get()) : List.of();
 
 
         
