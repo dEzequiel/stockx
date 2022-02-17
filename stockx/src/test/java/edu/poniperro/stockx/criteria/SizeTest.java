@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 import org.junit.Test;
 
-import edu.poniperro.stockx.item.Bid;
 import edu.poniperro.stockx.item.Offer;
 import edu.poniperro.stockx.item.Sale;
 import edu.poniperro.stockx.item.Sneaker;

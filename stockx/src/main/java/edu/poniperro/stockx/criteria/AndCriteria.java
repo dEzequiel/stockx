@@ -1,10 +1,7 @@
 package edu.poniperro.stockx.criteria;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import edu.poniperro.stockx.item.Item;
 import edu.poniperro.stockx.item.Offer;

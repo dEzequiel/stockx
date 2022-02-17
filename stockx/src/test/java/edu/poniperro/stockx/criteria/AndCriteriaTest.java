@@ -9,7 +9,6 @@ import edu.poniperro.stockx.item.Bid;
 import edu.poniperro.stockx.item.Offer;
 import edu.poniperro.stockx.item.Sale;
 import edu.poniperro.stockx.item.Sneaker;
-import edu.poniperro.stockx.criteria.AndCriteria;
 
 
 public class AndCriteriaTest {

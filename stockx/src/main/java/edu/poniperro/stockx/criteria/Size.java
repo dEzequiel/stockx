@@ -1,7 +1,6 @@
 package edu.poniperro.stockx.criteria;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import edu.poniperro.stockx.item.Item;

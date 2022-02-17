@@ -1,9 +1,7 @@
 package edu.poniperro.stockx.criteria;
 
-import java.lang.StackWalker.Option;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import edu.poniperro.stockx.item.Item;
 import edu.poniperro.stockx.item.Offer;
