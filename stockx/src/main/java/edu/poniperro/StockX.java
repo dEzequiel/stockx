@@ -9,6 +9,7 @@ import edu.poniperro.stockx.criteria.Criteria;
 import edu.poniperro.stockx.criteria.LastSale;
 import edu.poniperro.stockx.criteria.Max;
 import edu.poniperro.stockx.criteria.MaxBid;
+import edu.poniperro.stockx.criteria.Min;
 import edu.poniperro.stockx.criteria.MinAsk;
 import edu.poniperro.stockx.criteria.Sales;
 import edu.poniperro.stockx.criteria.Size;
@@ -66,10 +67,10 @@ public class StockX {
         Bid bid = new Bid("13", 550);
         sneaker.add(bid);
         sneaker.add(new Bid("6", 200));
-        sneaker.add(new Bid("9.5", 479));
         sneaker.add(new Bid("13", 338));
+        sneaker.add(new Bid("9.5", 479));
         sneaker.add(new Bid("9.5", 480));
-        
+
 
 //         /**
 //          * Crear asks
@@ -234,10 +235,10 @@ public class StockX {
 //          * de una talla.
 //          */
 
-//         Criteria sizeMinAsk = new Min(size, asks);
-//         List<Offer> sizeAsk = sizeMinAsk.checkCriteria(sneaker);
-//         sneaker.setAsk(sizeAsk.isEmpty()? 0 : sizeAsk.get(0).value());
-//         System.out.println("\n\t\t MIN ASK 9.5 US: " + sneaker.getAsk());
+        Criteria sizeMinAsk = new Min(size, asks);
+        List<Offer> sizeAsk = sizeMinAsk.checkCriteria(sneaker);
+        sneaker.setAsk(sizeAsk.isEmpty()? 0 : sizeAsk.get(0).value());
+        System.out.println("\n\t\t MIN ASK 9.5 US: " + sneaker.getAsk());
 
 //         /**
 //          * Mostrar info de la zapatilla 
